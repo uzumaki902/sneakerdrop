@@ -49,6 +49,29 @@ export default async function AdminDashboardLayout({
                 </div>
             </header>
 
+            <nav className="border-b border-black/10 bg-white">
+                <div className="mx-auto flex max-w-[1440px] gap-1 px-6 sm:px-10">
+                    <a
+                        href="/admin/dashboard"
+                        className="border-b-2 border-transparent px-4 py-3 text-sm font-semibold uppercase tracking-wider text-black/60 transition-colors hover:border-black hover:text-black"
+                    >
+                        Overview
+                    </a>
+                    <a
+                        href="/admin/dashboard/products"
+                        className="border-b-2 border-transparent px-4 py-3 text-sm font-semibold uppercase tracking-wider text-black/60 transition-colors hover:border-black hover:text-black"
+                    >
+                        Products
+                    </a>
+                    <a
+                        href="/admin/dashboard/waitlist"
+                        className="border-b-2 border-transparent px-4 py-3 text-sm font-semibold uppercase tracking-wider text-black/60 transition-colors hover:border-black hover:text-black"
+                    >
+                        Waitlist
+                    </a>
+                </div>
+            </nav>
+
             <main className="mx-auto max-w-[1440px] px-6 py-10 sm:px-10">
                 {children}
             </main>
