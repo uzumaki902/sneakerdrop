@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 const navigation = [
@@ -8,14 +9,17 @@ const navigation = [
 export default function Navbar() {
     return (
         <header className="sticky top-0 z-50 border-b border-white/10 bg-[#171717] text-white">
-            <nav className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 md:px-12">
+            <nav className="mx-auto flex h-16 w-full max-w-[1440px] items-center justify-between gap-3 px-4 sm:h-20 sm:px-6 md:px-12">
 
-
-                <Link href="/" className="text-2xl font-black tracking-[-0.08em]">
+                {/* Brand */}
+                <Link
+                    href="/"
+                    className="shrink-0 text-lg font-black tracking-[-0.08em] sm:text-xl md:text-2xl"
+                >
                     SNEAKER<span className="text-[#E53935]">DROP.</span>
                 </Link>
 
-
+                {/* Desktop Navigation */}
                 <div className="hidden items-center gap-10 md:flex">
                     {navigation.map((item) => (
                         <Link
@@ -28,10 +32,10 @@ export default function Navbar() {
                     ))}
                 </div>
 
-
+                {/* CTA */}
                 <Link
                     href="#collection"
-                    className="bg-[#E53935] px-5 py-3 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-black"
+                    className="shrink-0 whitespace-nowrap bg-[#E53935] px-3 py-3 text-[10px] font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-black sm:px-5 sm:text-xs"
                 >
                     Explore Drops <span aria-hidden="true">↗</span>
                 </Link>
