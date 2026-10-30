@@ -1,6 +1,7 @@
 
-import { createClient } from "@/lib/supabase/server";
+import Link from "next/link";
 import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 import { signOut } from "../login/actions";
 
 export default async function AdminDashboardLayout({
@@ -26,12 +27,12 @@ export default async function AdminDashboardLayout({
     return (
         <div className="min-h-screen bg-[#F5F3EE]">
             <header className="flex items-center justify-between bg-[#171717] px-6 py-5 text-white sm:px-10">
-                <a
+                <Link
                     href="/"
                     className="text-xl font-black tracking-[-0.08em]"
                 >
                     SNEAKER<span className="text-[#E53935]">DROP.</span>
-                </a>
+                </Link>
 
                 <div className="flex items-center gap-4">
                     <span className="hidden text-xs text-white/60 sm:block">
@@ -50,25 +51,27 @@ export default async function AdminDashboardLayout({
             </header>
 
             <nav className="border-b border-black/10 bg-white">
-                <div className="mx-auto flex max-w-[1440px] gap-1 px-6 sm:px-10">
-                    <a
+                <div className="mx-auto flex max-w-[1440px] gap-1 overflow-x-auto px-6 sm:px-10">
+                    <Link
                         href="/admin/dashboard"
                         className="border-b-2 border-transparent px-4 py-3 text-sm font-semibold uppercase tracking-wider text-black/60 transition-colors hover:border-black hover:text-black"
                     >
                         Overview
-                    </a>
-                    <a
+                    </Link>
+
+                    <Link
                         href="/admin/dashboard/products"
                         className="border-b-2 border-transparent px-4 py-3 text-sm font-semibold uppercase tracking-wider text-black/60 transition-colors hover:border-black hover:text-black"
                     >
                         Products
-                    </a>
-                    <a
+                    </Link>
+
+                    <Link
                         href="/admin/dashboard/waitlist"
                         className="border-b-2 border-transparent px-4 py-3 text-sm font-semibold uppercase tracking-wider text-black/60 transition-colors hover:border-black hover:text-black"
                     >
                         Waitlist
-                    </a>
+                    </Link>
                 </div>
             </nav>
 
