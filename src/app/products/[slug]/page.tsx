@@ -1,7 +1,7 @@
-
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProductBySlug } from "@/lib/products/queries";
+import WaitlistForm from "../WaitlistForm";
 
 type ProductPageProps = {
     params: Promise<{
@@ -144,6 +144,10 @@ export default async function ProductDetailsPage({
                                 {availability.description}
                             </p>
                         </div>
+
+                        {["upcoming", "sold_out"].includes(product.availability) && (
+                            <WaitlistForm productId={product.id} />
+                        )}
 
                         <div className="mt-10">
                             <Link
