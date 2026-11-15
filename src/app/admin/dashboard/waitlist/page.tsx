@@ -322,8 +322,7 @@ export default async function AdminWaitlistPage({
                                         <td className="px-5 py-5">
                                             {entry.products?.availability ? (
                                                 <span
-                                                    className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[10px] font-semibold tracking-wide ${
-                                                        availabilityStyles[entry.products.availability] ??
+                                                    className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[10px] font-semibold tracking-wide ${availabilityStyles[entry.products.availability] ??
                                                         "bg-neutral-100 text-neutral-600"
                                                         }`}
                                                 >
@@ -364,7 +363,7 @@ export default async function AdminWaitlistPage({
                 {/* FOOTER */}
                 <div className="flex flex-col justify-between gap-2 border-t border-black/10 bg-[#FAF9F6] px-5 py-4 sm:flex-row sm:items-center sm:px-7">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-neutral-400">
-                        SneakerDrop / Customer Intelligence
+                        SneakerDrop / Customer Intelligenceell
                     </p>
 
                     <p className="text-[10px] text-neutral-400">
