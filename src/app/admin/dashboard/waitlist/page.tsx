@@ -363,7 +363,7 @@ export default async function AdminWaitlistPage({
                 {/* FOOTER */}
                 <div className="flex flex-col justify-between gap-2 border-t border-black/10 bg-[#FAF9F6] px-5 py-4 sm:flex-row sm:items-center sm:px-7">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-neutral-400">
-                        SneakerDrop / Customer Intellirfrfrgencenjnlkmlkmell
+                        SneakerDrop / Customer Intellirfrfrgencenjnlkmlkmell fsdfsd
                     </p>
 
                     <p className="text-[10px] text-neutral-400">
